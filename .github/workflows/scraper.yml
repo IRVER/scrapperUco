@@ -1,0 +1,28 @@
+name: Ejecutar Scraper UCO
+
+on:
+  schedule:
+    - cron: "0 */8 * * *"  # Ejecutar todos los días a las 12:00 UTC (13:00 en España peninsular)
+  workflow_dispatch:  # Permite ejecutarlo manualmente desde GitHub Actions
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest  # Se ejecuta en un entorno Ubuntu
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt  # Instala las librerías necesarias
+
+      - name: Ejecutar el scraper
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+        run: python scrapper.py

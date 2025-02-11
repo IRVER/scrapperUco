@@ -14,8 +14,12 @@ RESULTS_DIR = "results"
 PROCESSED_IDS_FILE = os.path.join(RESULTS_DIR, "processed_ids.json")
 
 # Configuración del bot de Telegram
-TELEGRAM_TOKEN = "7862948303:AAHOLD-K_OJJMCxT57SD9FwvT7gtBahrwgU"  # Reemplaza con tu token del bot
-TELEGRAM_CHANNEL_ID = "@boletinUco"  # Reemplaza con el ID o username del canal
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")  # Toma el token desde la variable de entorno
+TELEGRAM_CHANNEL_ID = os.getenv("TELEGRAM_CHANNEL_ID")  # Toma el canal desde la variable de entorno
+
+if not TELEGRAM_TOKEN or not TELEGRAM_CHANNEL_ID:
+    raise ValueError("Faltan las variables de entorno TELEGRAM_TOKEN o TELEGRAM_CHANNEL_ID")
+
 
 os.makedirs(RESULTS_DIR, exist_ok=True)
 
