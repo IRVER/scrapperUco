@@ -1,0 +1,2089 @@
+<!--
+
+    Copyright 2010 Guadaltel, S.A.
+
+    Licensed under the EUPL, Version 1.1 or - as soon they
+    will be approved by the European Commission - subsequent
+    versions of the EUPL (the "Licence");
+    you may not use this work except in compliance with the
+    Licence.
+    You may obtain a copy of the Licence at:
+
+    http://ec.europa.eu/idabc/eupl
+
+    Unless required by applicable law or agreed to in
+    writing, software distributed under the Licence is
+    distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+    express or implied.
+    See the Licence for the specific language governing
+    permissions and limitations under the Licence.
+
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   Boletín Oficial de la Universidad de Córdoba
+  </title>
+  <!-- Hoja de estilo remota en servidor de Skual. Ha de eliminarse en producción -->
+  <link class="component" href="/bouco/a4j/s/3_3_3.Finalorg/richfaces/renderkit/html/css/basic_classes.xcss/DATB/eAF7KfL9QOjyGdIAFfoEZA__" rel="stylesheet" type="text/css"/>
+  <link class="component" href="/bouco/a4j/s/3_3_3.Finalorg/richfaces/renderkit/html/css/extended_classes.xcss/DATB/eAF7KfL9QOjyGdIAFfoEZA__" media="rich-extended-skinning" rel="stylesheet" type="text/css"/>
+  <script src="/bouco/a4j/g/3_3_3.Finalorg.ajax4jsf.javascript.AjaxScript" type="text/javascript">
+  </script>
+  <script src="/bouco/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/jquery/jquery.js" type="text/javascript">
+  </script>
+  <script src="/bouco/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/jquery.hotkeys.js" type="text/javascript">
+  </script>
+  <script src="/bouco/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/hotKey.js" type="text/javascript">
+  </script>
+  <script src="/bouco/a4j/g/3_3_3.Finalorg.ajax4jsf.javascript.PrototypeScript" type="text/javascript">
+  </script>
+  <script src="/bouco/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/utils.js" type="text/javascript">
+  </script>
+  <script src="/bouco/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/browser_info.js" type="text/javascript">
+  </script>
+  <script src="/bouco/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/modalPanel.js" type="text/javascript">
+  </script>
+  <script src="/bouco/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/modalPanelBorders.js" type="text/javascript">
+  </script>
+  <link class="component" href="/bouco/a4j/s/3_3_3.Finalorg/richfaces/renderkit/html/css/modalPanel.xcss/DATB/eAF7KfL9QOjyGdIAFfoEZA__" rel="stylesheet" type="text/css"/>
+  <link class="component" href="/bouco/a4j/s/3_3_3.Finalcss/panel.xcss/DATB/eAF7KfL9QOjyGdIAFfoEZA__" rel="stylesheet" type="text/css"/>
+  <script src="/bouco/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/events.js" type="text/javascript">
+  </script>
+  <script src="/bouco/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/json/json-dom.js" type="text/javascript">
+  </script>
+  <script src="/bouco/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/scriptaculous/effects.js" type="text/javascript">
+  </script>
+  <script src="/bouco/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/JQuerySpinBtn.js" type="text/javascript">
+  </script>
+  <script src="/bouco/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/calendar.js" type="text/javascript">
+  </script>
+  <link class="component" href="/bouco/a4j/s/3_3_3.Finalorg/richfaces/renderkit/html/css/calendar.xcss/DATB/eAF7KfL9QOjyGdIAFfoEZA__" rel="stylesheet" type="text/css"/>
+  <link class="component" href="/bouco/a4j/s/3_3_3.Finalcss/separator.xcss/DATB/eAF7KfL9QOjyGdIAFfoEZA__" rel="stylesheet" type="text/css"/>
+  <link class="component" href="/bouco/a4j/s/3_3_3.Finalcss/table.xcss/DATB/eAF7KfL9QOjyGdIAFfoEZA__" rel="stylesheet" type="text/css"/>
+  <script src="/bouco/a4j/g/3_3_3.Finalorg/ajax4jsf/javascript/scripts/form.js" type="text/javascript">
+  </script>
+  <script src="/bouco/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/datascroller.js" type="text/javascript">
+  </script>
+  <link class="component" href="/bouco/a4j/s/3_3_3.Finalcss/datascroller.xcss/DATB/eAF7KfL9QOjyGdIAFfoEZA__" rel="stylesheet" type="text/css"/>
+  <script src="/bouco/a4j/g/3_3_3.Finalscripts/scriptaculous/effects.js" type="text/javascript">
+  </script>
+  <script src="/bouco/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/script/processEffect.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   window.RICH_FACES_EXTENDED_SKINNING_ON=true;
+  </script>
+  <script src="/bouco/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/skinning.js" type="text/javascript">
+  </script>
+  <link href="/bouco/temas/tablon/css/estilo.css" rel="stylesheet" type="text/css"/>
+  <!-- Hoja de estilo final. Se comenta para habilitar hoja remota en servidor de Skual. Ha de activarse en producción
+
+<link rel="stylesheet" href="/bouco/temas/tablon/css/estilo.css" type="text/css"></link>
+
+-->
+  <script language="javascript" src="/bouco/js/util.js" type="text/javascript">
+  </script>
+  <script language="javascript" src="/bouco/js/clipboard.min.js" type="text/javascript">
+  </script>
+  <!--[if gte IE 9]>
+	  <style type="text/css">
+	    .gradient {
+	       filter: none;
+	    }
+	  </style>
+	<![endif]-->
+ </head>
+ <body onload="refreshHeadFormTime();">
+  <!-- POLL PARA REFRESCO DE SESSION -->
+  <form action="/bouco/bandejaAnuncios.htm" enctype="application/x-www-form-urlencoded" id="j_id6" method="post" name="j_id6">
+   <input name="j_id6" type="hidden" value="j_id6"/>
+   <span id="j_id6:poll" style="display:none;">
+    <script type="text/javascript">
+     A4J.AJAX.Poll('j_id6',{'pollId':'j_id6:poll','similarityGroupingId':'j_id6:poll','parameters':{'j_id6:poll':'j_id6:poll'} ,'pollinterval':60000,'containerId':'j_id5'} );
+    </script>
+   </span>
+   <input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden" value="j_id1"/>
+  </form>
+  <!-- CABECERA -->
+  <!-- Encabezado -->
+  <div id="encabezado">
+   <a href="http://www.uco.es/">
+    <img alt="Universidad de Córdoba" height="103" id="logo-uco" src="/bouco/temas/tablon/imagenes/logo-uco.png" width="173"/>
+   </a>
+   <h1>
+    <a href="https://sede.uco.es">
+     <strong>
+      Sede Electrónica
+     </strong>
+     <br/>
+     de la Universidad de Córdoba
+    </a>
+   </h1>
+   <div id="fecha-hora-oficiales">
+    <p>
+     <a href="https://sede.uco.es/fecha-hora-oficial/">
+      Fecha y
+      <br/>
+      hora oficiales
+     </a>
+    </p>
+   </div>
+   <div id="calendario-inhabiles">
+    <p>
+     <a href="https://sede.uco.es/calendario-dias-inhabiles/">
+      Calendario de
+      <br/>
+      días inhábiles
+     </a>
+    </p>
+   </div>
+  </div>
+  <!-- Área de migas de pan -->
+  <div id="migas-pan">
+   <!-- Bloque de logo BOUCO -->
+   <div id="logobouco">
+    <img alt="Boletín Oficial de la Universidad de Córdoba" height="23" src="/bouco/temas/tablon/imagenes/icono-bouco.png" width="127"/>
+    Boletín Oficial de la Universidad de Córdoba
+   </div>
+   <!-- Bloque de imagen -->
+   <div id="logo2_autenticado">
+    <img id="j_id8" src="/bouco/a4j/s/3_3_3.Finalorg.ajax4jsf.resource.UserResource/n/s/DATA/eAGFkj9rFUEUxW8Wg9EoqE8MFkIS!4HIPB-YQmJAjaKBfQZcIxgb7-7et5lld2YyM!uyGrSzsbGwtbPVyk9gK9jkG1iJiBAEe2fmRSVpnO4OZ8793Xvm3Q8YNxouSF0wLLG9XJoB02RkozNiK4b0vZ3izIrmN9Ei-NOZ-x7BvhgOZ5rQ0qIUloS1cCwucYjdCkXRXU5Lyux8DPupVdx5rsNzGIthopY5H3DKd-rxIVYNhaJVjuWct2jZADMyLJO1ksJ5s8S6RndklZNOcEj64acPC6!ffO5HEMVwIKvQmLtY026GxGouCsdw0Lg3efCwcGJEyWU3Ic2x4k8xrWi-Vb79edeSmUYEgIqsYVSx-1j0ya7J!Far3CSGSxH2ADB2CKDVcHIE7aR7devx1OTqqy!bUdB1!ur-Ob198TL5ubp11Ss8wYwPo0ylCa33-i3Vqkq3p35Nfjza97394iY2zsLM6U0Ujci4NEymLg7Si5hSRhqXaixIPANoNHQeheGZj8jtNKzn!daDr99Obd4OAG6uyMJxz8m4ZMuNVY11QsLawpFwHd6O4lWq3UjhsUv8iWxs15KjczndQJFTidf!ALVrtq6mr!UuzV3s9a5M7!o1C7P!JZ910ajfu9PsRQ__"/>
+   </div>
+   <!-- Bloque de búsqueda rápida -->
+   <div id="busqueda_rapida">
+    <span id="j_id10" style="display:none">
+     <script type="text/javascript">
+      new Richfaces.hotKey('j_id10','return','', {timing:'immediate'}, function(event) { buscaRapida();return false; });
+     </script>
+    </span>
+    <div id="busqueda_rapida">
+     <form action="/bouco/bandejaAnuncios.htm" enctype="application/x-www-form-urlencoded" id="j_id11" method="post" name="j_id11">
+      <input name="j_id11" type="hidden" value="j_id11"/>
+      <script id="j_id11:selectorBusqRapida" type="text/javascript">
+       //<![CDATA[
+		buscaRapida=function(){A4J.AJAX.Submit('j_id11',null,{'similarityGroupingId':'j_id11:selectorBusqRapida','parameters':{'j_id11:selectorBusqRapida':'j_id11:selectorBusqRapida'} } )};
+		//]]>
+      </script>
+      <table class="alignCenter" id="j_id11:panelBusqRapida">
+       <tbody>
+        <tr>
+         <td>
+          <input class="campoBusqueda2" id="j_id11:idBusqRapida" maxlength="200" name="j_id11:idBusqRapida" type="text" value=""/>
+         </td>
+         <td>
+          <input class="icono buscar" id="j_id11:j_id12" name="j_id11:j_id12" onclick="A4J.AJAX.Submit('j_id11',event,{'similarityGroupingId':'j_id11:j_id12','parameters':{'j_id11:j_id12':'j_id11:j_id12'} } );return false;" title="Buscar" type="button"/>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <a href="#" id="j_id11:j_id13" name="j_id11:j_id13" onclick="A4J.AJAX.Submit('j_id11',event,{'similarityGroupingId':'j_id11:j_id13','parameters':{'j_id11:j_id13':'j_id11:j_id13'} } );return false;" style="color:white;text-decoration: underline;">
+           Mostrar búsqueda avanzada
+          </a>
+         </td>
+         <td>
+          <div>
+          </div>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden" value="j_id1"/>
+     </form>
+    </div>
+   </div>
+  </div>
+  <div class="clearIt">
+  </div>
+  <form action="/bouco/bandejaAnuncios.htm" enctype="application/x-www-form-urlencoded" id="j_id17" method="post" name="j_id17" style="display:inline">
+   <input name="j_id17" type="hidden" value="j_id17"/>
+   <div class="clearIt">
+   </div>
+   <div id="home">
+    <!-- Panel de espera -->
+    <span id="_viewRoot:status">
+     <span id="_viewRoot:status.start" style="display: none">
+      <div id="j_id17:ajaxLoadingModalBox" style="display: none;">
+       <input autocomplete="off" id="j_id17:ajaxLoadingModalBoxOpenedState" name="j_id17:ajaxLoadingModalBoxOpenedState" type="hidden"/>
+       <div class="rich-modalpanel" id="j_id17:ajaxLoadingModalBoxContainer" style="position: absolute; display: none; z-index: 3000; background-color: inherit;">
+        <div class="rich-mpnl-mask-div-opaque rich-mpnl-mask-div" id="j_id17:ajaxLoadingModalBoxDiv" style="z-index: -1;">
+         <button class="rich-mpnl-button" id="j_id17:ajaxLoadingModalBoxFirstHref">
+         </button>
+        </div>
+        <div class="rich-mpnl-panel">
+         <div class="rich-mp-container" id="j_id17:ajaxLoadingModalBoxCDiv" style="position: absolute; left: 0px; top: 0px; z-index: 9;">
+          <div class="rich-mpnl-shadow" id="j_id17:ajaxLoadingModalBoxShadowDiv">
+          </div>
+          <div class="rich-mpnl-ovf-hd rich-mpnl-trim rich-mpnl-content" id="j_id17:ajaxLoadingModalBoxContentDiv">
+           <table border="0" cellpadding="0" cellspacing="0" class="rich-mp-content-table" id="j_id17:ajaxLoadingModalBoxContentTable" style="height: 100%; width: 100%;">
+            <tr style="height: 99%">
+             <td class="rich-mpnl-body" valign="top">
+              <table>
+               <tbody>
+                <tr>
+                 <td>
+                  <img src="/bouco/bouco/temas/iconos/16x16/cargando.gif"/>
+                 </td>
+                 <td>
+                  <span class="texto_espera">
+                   Cargando, por favor espere..
+                  </span>
+                 </td>
+                </tr>
+               </tbody>
+              </table>
+             </td>
+            </tr>
+           </table>
+          </div>
+          <div class="rich-mpnl-resizer" id="j_id17:ajaxLoadingModalBoxResizerN" style="width: 40px; height: 4px;">
+          </div>
+          <div class="rich-mpnl-resizer" id="j_id17:ajaxLoadingModalBoxResizerE" style="height: 40px; width: 4px;">
+          </div>
+          <div class="rich-mpnl-resizer" id="j_id17:ajaxLoadingModalBoxResizerS" style="width: 40px; height: 4px;">
+          </div>
+          <div class="rich-mpnl-resizer" id="j_id17:ajaxLoadingModalBoxResizerW" style="height: 40px; width: 4px;">
+          </div>
+          <div class="rich-mpnl-resizer" id="j_id17:ajaxLoadingModalBoxResizerNWU" style="width: 40px; height: 4px;">
+          </div>
+          <div class="rich-mpnl-resizer" id="j_id17:ajaxLoadingModalBoxResizerNEU" style="height: 40px; width: 4px;">
+          </div>
+          <div class="rich-mpnl-resizer" id="j_id17:ajaxLoadingModalBoxResizerNEL" style="width: 40px; height: 4px;">
+          </div>
+          <div class="rich-mpnl-resizer" id="j_id17:ajaxLoadingModalBoxResizerSEU" style="height: 40px; width: 4px;">
+          </div>
+          <div class="rich-mpnl-resizer" id="j_id17:ajaxLoadingModalBoxResizerSEL" style="width: 40px; height: 4px;">
+          </div>
+          <div class="rich-mpnl-resizer" id="j_id17:ajaxLoadingModalBoxResizerSWL" style="height: 40px; width: 4px;">
+          </div>
+          <div class="rich-mpnl-resizer" id="j_id17:ajaxLoadingModalBoxResizerSWU" style="width: 40px; height: 4px;">
+          </div>
+          <div class="rich-mpnl-resizer" id="j_id17:ajaxLoadingModalBoxResizerNWL" style="height: 40px; width: 4px;">
+          </div>
+         </div>
+        </div>
+        <div class="rich-mpnl-mask-div rich-mpnl-mask-div-transparent" id="j_id17:ajaxLoadingModalBoxCursorDiv" style="z-index: -200;">
+         <button class="rich-mpnl-button" id="j_id17:ajaxLoadingModalBoxLastHref">
+         </button>
+        </div>
+        <script type="text/javascript">
+         new ModalPanel('j_id17:ajaxLoadingModalBox',
+				{
+					width: 150,
+					height: 50,
+
+					minWidth: -1,
+					minHeight: -1,
+
+					resizeable: true,
+					moveable: true,
+
+					left: "auto",
+					top: "auto",
+
+					zindex: 3000,onresize: '',onmove: '',onshow: '',onhide: '',onbeforeshow: '',onbeforehide: '',
+					domElementAttachment: "",				
+					keepVisualState: false,
+					showWhenRendered: false,
+					selectBehavior: "disable",
+
+					autosized: false,
+					overlapEmbedObjects: false});
+        </script>
+       </div>
+       <script type="text/javascript">
+       </script>
+      </div>
+     </span>
+     <script type="text/javascript">
+      window.document.getElementById('_viewRoot:status.start').onstart=function(){bloquearPantalla();};
+     </script>
+     <span id="_viewRoot:status.stop">
+     </span>
+     <script type="text/javascript">
+      window.document.getElementById('_viewRoot:status.stop').onstop=function(){desbloquearPantalla();};
+     </script>
+    </span>
+    <!-- Panel usuario -->
+   </div>
+   <input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden" value="j_id1"/>
+  </form>
+  <!-- MIGAS -->
+  <div id="migas" style="display: none;">
+   <div id="migas2">
+    <div id="migas_item">
+     <label>
+      Boletín Oficial de la Universidad de Córdoba
+     </label>
+    </div>
+   </div>
+  </div>
+  <!-- PANTALLAS DE TABLON -->
+  <div id="contenido">
+   <center>
+    <table cellpadding="2" cellspacing="2" style="width:96%;">
+     <tbody>
+      <tr>
+       <td class="vAlignTop">
+        <div class="rich-panel bannerCnt noBorder noBackground noPadding" id="j_id28" style="width:100%">
+         <div class="rich-panel-body noPadding" id="j_id28_body">
+          <div id="tituloBloque">
+           <form action="/bouco/bandejaAnuncios.htm" enctype="application/x-www-form-urlencoded" id="j_id29" method="post" name="j_id29">
+            <input name="j_id29" type="hidden" value="j_id29"/>
+            <table style="width:96%;">
+             <tbody>
+              <tr>
+               <td>
+                <label class="accesoTitulo">
+                 Últimas publicaciones
+                </label>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden" value="j_id1"/>
+           </form>
+           <div class="rich-panel bannerCnt noBorder noBackground noPadding" id="j_id33">
+            <div class="rich-panel-body noPadding" id="j_id33_body">
+            </div>
+           </div>
+          </div>
+          <span id="richListaCrit" style="width:100%;">
+           <form action="/bouco/bandejaAnuncios.htm" enctype="application/x-www-form-urlencoded" id="j_id34" method="post" name="j_id34">
+            <input name="j_id34" type="hidden" value="j_id34"/>
+            <input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden" value="j_id1"/>
+           </form>
+          </span>
+          <img alt="" class="rich-spacer" height="10" id="j_id40" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="100%"/>
+          <body>
+           <div id="bandejaAnunciosContent">
+            <form action="/bouco/bandejaAnuncios.htm" enctype="application/x-www-form-urlencoded" id="idBandejaAnuncios" method="post" name="idBandejaAnuncios">
+             <input name="idBandejaAnuncios" type="hidden" value="idBandejaAnuncios"/>
+             <table cellpadding="2" cellspacing="2" id="idBandejaAnuncios:idCriteriosBusqueda" width="100%">
+              <tbody>
+              </tbody>
+             </table>
+             <span id="idBandejaAnuncios:contenedorTituloPubli">
+             </span>
+             <div id="idBandejaAnuncios:idListaAnunciosRefresh">
+              <table border="0" cellpadding="0" cellspacing="0" class="rich-table" id="idBandejaAnuncios:j_id88" width="100%">
+               <colgroup span="1">
+               </colgroup>
+               <tfoot>
+                <tr class="rich-table-footer">
+                 <td class="rich-table-footercell" colspan="1" scope="colgroup">
+                  <div align="center" class="rich-datascr" id="idBandejaAnuncios:j_id88:ds" style=" ">
+                   <table border="0" cellpadding="0" cellspacing="1" class="rich-dtascroller-table" id="idBandejaAnuncios:j_id88:ds_table" style="text-align:center">
+                    <tbody>
+                     <tr>
+                      <td class="rich-datascr-button-dsbld rich-datascr-button">
+                       ««
+                      </td>
+                      <td class="rich-datascr-button-dsbld rich-datascr-button">
+                       «
+                      </td>
+                      <td class="rich-datascr-act">
+                       1
+                      </td>
+                      <td class="rich-datascr-inact" onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': '2'});">
+                       2
+                      </td>
+                      <td class="rich-datascr-inact" onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': '3'});">
+                       3
+                      </td>
+                      <td class="rich-datascr-inact" onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': '4'});">
+                       4
+                      </td>
+                      <td class="rich-datascr-inact" onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': '5'});">
+                       5
+                      </td>
+                      <td class="rich-datascr-inact" onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': '6'});">
+                       6
+                      </td>
+                      <td class="rich-datascr-inact" onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': '7'});">
+                       7
+                      </td>
+                      <td class="rich-datascr-inact" onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': '8'});">
+                       8
+                      </td>
+                      <td class="rich-datascr-inact" onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': '9'});">
+                       9
+                      </td>
+                      <td class="rich-datascr-inact" onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': '10'});">
+                       10
+                      </td>
+                      <td class="rich-datascr-button" onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': 'fastforward'});">
+                       »
+                      </td>
+                      <td class="rich-datascr-button" onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': 'last'});">
+                       »»
+                      </td>
+                     </tr>
+                    </tbody>
+                   </table>
+                   <script type="text/javascript">
+                    new Richfaces.Datascroller('idBandejaAnuncios:j_id88:ds', function(event){A4J.AJAX.Submit('idBandejaAnuncios',event,{'ignoreDupResponses':true,'implicitEventsQueue':'idBandejaAnuncios:j_id88:ds','similarityGroupingId':'idBandejaAnuncios:j_id88:ds','parameters':{'ajaxSingle':'idBandejaAnuncios:j_id88:ds','idBandejaAnuncios:j_id88:ds':event.memo.page} } ); return false;});
+                   </script>
+                  </div>
+                 </td>
+                </tr>
+               </tfoot>
+               <tbody id="idBandejaAnuncios:j_id88:tb">
+                <tr class="rich-table-row rich-table-firstrow odd">
+                 <td class="rich-table-cell center" id="idBandejaAnuncios:j_id88:10946:j_id89">
+                  <table class="stable" width="98%">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <script type="text/javascript">
+                       //<![CDATA[
+ {
+	var selector = ".odd .stable";
+	try {
+		selector = eval(".odd .stable");
+	} catch (e) {}
+	jQuery(selector).addClass('row_par');
+}
+//]]>
+                      </script>
+                     </td>
+                    </tr>
+                    <tr>
+                     <td>
+                      <script type="text/javascript">
+                       //<![CDATA[
+ {
+	var selector = ".even .stable";
+	try {
+		selector = eval(".even .stable");
+	} catch (e) {}
+	jQuery(selector).addClass('row_impar');
+}
+//]]>
+                      </script>
+                     </td>
+                    </tr>
+                    <tr>
+                     <td>
+                      <table width="100%">
+                       <tbody>
+                        <tr>
+                         <td class="width95">
+                          <table width="100%">
+                           <tbody>
+                            <tr>
+                             <td class="width15">
+                              <table>
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <a class="accesoTitulo" href="#" id="idBandejaAnuncios:j_id88:10946:j_id96" onclick="return _JSFFormSubmit('idBandejaAnuncios:j_id88:10946:j_id96','idBandejaAnuncios',null,{'idBandejaAnuncios:j_idcl':'idBandejaAnuncios:j_id88:10946:j_id96'} )" style="text-decoration:underline;font-weight:bold;">
+                                   N.º 2025/00168
+                                  </a>
+                                 </td>
+                                </tr>
+                               </tbody>
+                              </table>
+                             </td>
+                             <td class="width80">
+                              <table>
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <b>
+                                   <a href="#" id="idBandejaAnuncios:j_id88:10946:j_id100" onclick="return _JSFFormSubmit('idBandejaAnuncios:j_id88:10946:j_id100','idBandejaAnuncios',null,{'idBandejaAnuncios:j_idcl':'idBandejaAnuncios:j_id88:10946:j_id100'} )" style="text-decoration:underline;text-transform:uppercase;font-weight:bold;">
+                                    Resolución provisional de la Convocatoria de ayudas a personas refugiadas y/o solicitantes de asilo para la realización de actividades formativas
+                                   </a>
+                                  </b>
+                                  <i>
+                                   <label style="font-style:italic">
+                                    Publicado el
+                                   </label>
+                                   <span style="font-style:italic">
+                                    10/02/2025
+                                   </span>
+                                  </i>
+                                 </td>
+                                </tr>
+                               </tbody>
+                              </table>
+                             </td>
+                            </tr>
+                            <tr>
+                             <td class="width15">
+                              <img alt="" class="rich-spacer" height="5" id="idBandejaAnuncios:j_id88:10946:j_id105" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="100%"/>
+                             </td>
+                             <td class="width80">
+                              <table>
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <label>
+                                   Resolución de la Vicerrectora de Igualdad, Inclusión y Compromiso Social, de fecha 10 de febrero de 2025, por la que se publica el listado provisional de solicitudes aprobadas en la Convocatoria de ayudas a personas refugiadas y/o solicitantes de asilo para la realización de actividades formativas.
+                                  </label>
+                                 </td>
+                                </tr>
+                               </tbody>
+                              </table>
+                             </td>
+                            </tr>
+                           </tbody>
+                          </table>
+                         </td>
+                         <td class="width5">
+                          <table width="100%">
+                           <tbody>
+                            <tr>
+                             <td>
+                              <table style="float:right;" width="100%">
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <table class="alignCenter">
+                                   <tbody>
+                                    <tr>
+                                     <td>
+                                      <a href="#" id="idBandejaAnuncios:j_id88:10946:j_id111" onclick="return _JSFFormSubmit('idBandejaAnuncios:j_id88:10946:j_id111','idBandejaAnuncios',null,{'idBandejaAnuncios:j_idcl':'idBandejaAnuncios:j_id88:10946:j_id111'} )" title="Descargar Documentos Publicados">
+                                       <img alt="" class="rich-spacer icono32 descargarPubliBandeja alignTextBottom" height="32" id="idBandejaAnuncios:j_id88:10946:j_id112" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="32"/>
+                                      </a>
+                                     </td>
+                                    </tr>
+                                    <tr>
+                                     <td>
+                                      <label class="textoIcono32">
+                                       Descargar Documento
+                                      </label>
+                                     </td>
+                                    </tr>
+                                   </tbody>
+                                  </table>
+                                 </td>
+                                 <td>
+                                  <table class="alignCenter">
+                                   <tbody>
+                                    <tr>
+                                     <td>
+                                      <a href="#" id="idBandejaAnuncios:j_id88:10946:j_id115" name="idBandejaAnuncios:j_id88:10946:j_id115" onclick="A4J.AJAX.Submit('idBandejaAnuncios',event,{'similarityGroupingId':'idBandejaAnuncios:j_id88:10946:j_id115','parameters':{'idBandejaAnuncios:j_id88:10946:j_id115':'idBandejaAnuncios:j_id88:10946:j_id115'} } );return false;" title="Consultar Anuncio">
+                                       <img alt="" class="rich-spacer icono32 detallesBandeja alignTextBottom" height="32" id="idBandejaAnuncios:j_id88:10946:j_id116" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="32"/>
+                                      </a>
+                                     </td>
+                                    </tr>
+                                    <tr>
+                                     <td>
+                                      <label class="textoIcono32">
+                                       Detalle Anuncio
+                                      </label>
+                                     </td>
+                                    </tr>
+                                   </tbody>
+                                  </table>
+                                 </td>
+                                </tr>
+                               </tbody>
+                              </table>
+                             </td>
+                            </tr>
+                           </tbody>
+                          </table>
+                         </td>
+                        </tr>
+                       </tbody>
+                      </table>
+                     </td>
+                    </tr>
+                   </tbody>
+                  </table>
+                 </td>
+                </tr>
+                <tr class="rich-table-row even">
+                 <td class="rich-table-cell center" id="idBandejaAnuncios:j_id88:10945:j_id89">
+                  <table class="stable" width="98%">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <script type="text/javascript">
+                       //<![CDATA[
+ {
+	var selector = ".odd .stable";
+	try {
+		selector = eval(".odd .stable");
+	} catch (e) {}
+	jQuery(selector).addClass('row_par');
+}
+//]]>
+                      </script>
+                     </td>
+                    </tr>
+                    <tr>
+                     <td>
+                      <script type="text/javascript">
+                       //<![CDATA[
+ {
+	var selector = ".even .stable";
+	try {
+		selector = eval(".even .stable");
+	} catch (e) {}
+	jQuery(selector).addClass('row_impar');
+}
+//]]>
+                      </script>
+                     </td>
+                    </tr>
+                    <tr>
+                     <td>
+                      <table width="100%">
+                       <tbody>
+                        <tr>
+                         <td class="width95">
+                          <table width="100%">
+                           <tbody>
+                            <tr>
+                             <td class="width15">
+                              <table>
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <a class="accesoTitulo" href="#" id="idBandejaAnuncios:j_id88:10945:j_id96" onclick="return _JSFFormSubmit('idBandejaAnuncios:j_id88:10945:j_id96','idBandejaAnuncios',null,{'idBandejaAnuncios:j_idcl':'idBandejaAnuncios:j_id88:10945:j_id96'} )" style="text-decoration:underline;font-weight:bold;">
+                                   N.º 2025/00167
+                                  </a>
+                                 </td>
+                                </tr>
+                               </tbody>
+                              </table>
+                             </td>
+                             <td class="width80">
+                              <table>
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <b>
+                                   <a href="#" id="idBandejaAnuncios:j_id88:10945:j_id100" onclick="return _JSFFormSubmit('idBandejaAnuncios:j_id88:10945:j_id100','idBandejaAnuncios',null,{'idBandejaAnuncios:j_idcl':'idBandejaAnuncios:j_id88:10945:j_id100'} )" style="text-decoration:underline;text-transform:uppercase;font-weight:bold;">
+                                    Instrucción 1/2025 por la que se establece el procedimiento para la contratación de trabajos de traducción, interpretación y mediación lingüística
+                                   </a>
+                                  </b>
+                                  <i>
+                                   <label style="font-style:italic">
+                                    Publicado el
+                                   </label>
+                                   <span style="font-style:italic">
+                                    10/02/2025
+                                   </span>
+                                  </i>
+                                 </td>
+                                </tr>
+                               </tbody>
+                              </table>
+                             </td>
+                            </tr>
+                            <tr>
+                             <td class="width15">
+                              <img alt="" class="rich-spacer" height="5" id="idBandejaAnuncios:j_id88:10945:j_id105" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="100%"/>
+                             </td>
+                             <td class="width80">
+                              <table>
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <label>
+                                   Instrucción 1/2025 del Vicerrectorado de Estudios de Grado, Calidad e Innovación docente, de 4 de febrero de 2025, por la que se establece el procedimiento para la contratación de trabajos de traducción, interpretación y mediación lingüística en el marco del encargo de gestión UCOIdiomas S.L.M.P.
+                                  </label>
+                                 </td>
+                                </tr>
+                               </tbody>
+                              </table>
+                             </td>
+                            </tr>
+                           </tbody>
+                          </table>
+                         </td>
+                         <td class="width5">
+                          <table width="100%">
+                           <tbody>
+                            <tr>
+                             <td>
+                              <table style="float:right;" width="100%">
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <table class="alignCenter">
+                                   <tbody>
+                                    <tr>
+                                     <td>
+                                      <a href="#" id="idBandejaAnuncios:j_id88:10945:j_id111" onclick="return _JSFFormSubmit('idBandejaAnuncios:j_id88:10945:j_id111','idBandejaAnuncios',null,{'idBandejaAnuncios:j_idcl':'idBandejaAnuncios:j_id88:10945:j_id111'} )" title="Descargar Documentos Publicados">
+                                       <img alt="" class="rich-spacer icono32 descargarPubliBandeja alignTextBottom" height="32" id="idBandejaAnuncios:j_id88:10945:j_id112" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="32"/>
+                                      </a>
+                                     </td>
+                                    </tr>
+                                    <tr>
+                                     <td>
+                                      <label class="textoIcono32">
+                                       Descargar Documento
+                                      </label>
+                                     </td>
+                                    </tr>
+                                   </tbody>
+                                  </table>
+                                 </td>
+                                 <td>
+                                  <table class="alignCenter">
+                                   <tbody>
+                                    <tr>
+                                     <td>
+                                      <a href="#" id="idBandejaAnuncios:j_id88:10945:j_id115" name="idBandejaAnuncios:j_id88:10945:j_id115" onclick="A4J.AJAX.Submit('idBandejaAnuncios',event,{'similarityGroupingId':'idBandejaAnuncios:j_id88:10945:j_id115','parameters':{'idBandejaAnuncios:j_id88:10945:j_id115':'idBandejaAnuncios:j_id88:10945:j_id115'} } );return false;" title="Consultar Anuncio">
+                                       <img alt="" class="rich-spacer icono32 detallesBandeja alignTextBottom" height="32" id="idBandejaAnuncios:j_id88:10945:j_id116" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="32"/>
+                                      </a>
+                                     </td>
+                                    </tr>
+                                    <tr>
+                                     <td>
+                                      <label class="textoIcono32">
+                                       Detalle Anuncio
+                                      </label>
+                                     </td>
+                                    </tr>
+                                   </tbody>
+                                  </table>
+                                 </td>
+                                </tr>
+                               </tbody>
+                              </table>
+                             </td>
+                            </tr>
+                           </tbody>
+                          </table>
+                         </td>
+                        </tr>
+                       </tbody>
+                      </table>
+                     </td>
+                    </tr>
+                   </tbody>
+                  </table>
+                 </td>
+                </tr>
+                <tr class="rich-table-row odd">
+                 <td class="rich-table-cell center" id="idBandejaAnuncios:j_id88:10944:j_id89">
+                  <table class="stable" width="98%">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <script type="text/javascript">
+                       //<![CDATA[
+ {
+	var selector = ".odd .stable";
+	try {
+		selector = eval(".odd .stable");
+	} catch (e) {}
+	jQuery(selector).addClass('row_par');
+}
+//]]>
+                      </script>
+                     </td>
+                    </tr>
+                    <tr>
+                     <td>
+                      <script type="text/javascript">
+                       //<![CDATA[
+ {
+	var selector = ".even .stable";
+	try {
+		selector = eval(".even .stable");
+	} catch (e) {}
+	jQuery(selector).addClass('row_impar');
+}
+//]]>
+                      </script>
+                     </td>
+                    </tr>
+                    <tr>
+                     <td>
+                      <table width="100%">
+                       <tbody>
+                        <tr>
+                         <td class="width95">
+                          <table width="100%">
+                           <tbody>
+                            <tr>
+                             <td class="width15">
+                              <table>
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <a class="accesoTitulo" href="#" id="idBandejaAnuncios:j_id88:10944:j_id96" onclick="return _JSFFormSubmit('idBandejaAnuncios:j_id88:10944:j_id96','idBandejaAnuncios',null,{'idBandejaAnuncios:j_idcl':'idBandejaAnuncios:j_id88:10944:j_id96'} )" style="text-decoration:underline;font-weight:bold;">
+                                   N.º 2025/00166
+                                  </a>
+                                 </td>
+                                </tr>
+                               </tbody>
+                              </table>
+                             </td>
+                             <td class="width80">
+                              <table>
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <b>
+                                   <a href="#" id="idBandejaAnuncios:j_id88:10944:j_id100" onclick="return _JSFFormSubmit('idBandejaAnuncios:j_id88:10944:j_id100','idBandejaAnuncios',null,{'idBandejaAnuncios:j_idcl':'idBandejaAnuncios:j_id88:10944:j_id100'} )" style="text-decoration:underline;text-transform:uppercase;font-weight:bold;">
+                                    Extracto de la Convocatoria de becas Erasmus+ (Acción KA1) movilidad de personal con fines docentes "STA-Staff Mobility for Teaching Assignment"
+                                   </a>
+                                  </b>
+                                  <i>
+                                   <label style="font-style:italic">
+                                    Publicado el
+                                   </label>
+                                   <span style="font-style:italic">
+                                    10/02/2025
+                                   </span>
+                                  </i>
+                                 </td>
+                                </tr>
+                               </tbody>
+                              </table>
+                             </td>
+                            </tr>
+                            <tr>
+                             <td class="width15">
+                              <img alt="" class="rich-spacer" height="5" id="idBandejaAnuncios:j_id88:10944:j_id105" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="100%"/>
+                             </td>
+                             <td class="width80">
+                              <table>
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <label>
+                                   Resolución de la Vicerrectora de Internacionalización, de 10 de febrero de 2025, por la que se aprueba la Convocatoria de becas Erasmus+ (Acción KA1) para movilidad de personal con fines docentes "STA - Staff mobility for Teaching Assignment", Curso 2024/2025.
+                                  </label>
+                                 </td>
+                                </tr>
+                               </tbody>
+                              </table>
+                             </td>
+                            </tr>
+                           </tbody>
+                          </table>
+                         </td>
+                         <td class="width5">
+                          <table width="100%">
+                           <tbody>
+                            <tr>
+                             <td>
+                              <table style="float:right;" width="100%">
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <table class="alignCenter">
+                                   <tbody>
+                                    <tr>
+                                     <td>
+                                      <a href="#" id="idBandejaAnuncios:j_id88:10944:j_id111" onclick="return _JSFFormSubmit('idBandejaAnuncios:j_id88:10944:j_id111','idBandejaAnuncios',null,{'idBandejaAnuncios:j_idcl':'idBandejaAnuncios:j_id88:10944:j_id111'} )" title="Descargar Documentos Publicados">
+                                       <img alt="" class="rich-spacer icono32 descargarPubliBandeja alignTextBottom" height="32" id="idBandejaAnuncios:j_id88:10944:j_id112" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="32"/>
+                                      </a>
+                                     </td>
+                                    </tr>
+                                    <tr>
+                                     <td>
+                                      <label class="textoIcono32">
+                                       Descargar Documento
+                                      </label>
+                                     </td>
+                                    </tr>
+                                   </tbody>
+                                  </table>
+                                 </td>
+                                 <td>
+                                  <table class="alignCenter">
+                                   <tbody>
+                                    <tr>
+                                     <td>
+                                      <a href="#" id="idBandejaAnuncios:j_id88:10944:j_id115" name="idBandejaAnuncios:j_id88:10944:j_id115" onclick="A4J.AJAX.Submit('idBandejaAnuncios',event,{'similarityGroupingId':'idBandejaAnuncios:j_id88:10944:j_id115','parameters':{'idBandejaAnuncios:j_id88:10944:j_id115':'idBandejaAnuncios:j_id88:10944:j_id115'} } );return false;" title="Consultar Anuncio">
+                                       <img alt="" class="rich-spacer icono32 detallesBandeja alignTextBottom" height="32" id="idBandejaAnuncios:j_id88:10944:j_id116" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="32"/>
+                                      </a>
+                                     </td>
+                                    </tr>
+                                    <tr>
+                                     <td>
+                                      <label class="textoIcono32">
+                                       Detalle Anuncio
+                                      </label>
+                                     </td>
+                                    </tr>
+                                   </tbody>
+                                  </table>
+                                 </td>
+                                </tr>
+                               </tbody>
+                              </table>
+                             </td>
+                            </tr>
+                           </tbody>
+                          </table>
+                         </td>
+                        </tr>
+                       </tbody>
+                      </table>
+                     </td>
+                    </tr>
+                   </tbody>
+                  </table>
+                 </td>
+                </tr>
+                <tr class="rich-table-row even">
+                 <td class="rich-table-cell center" id="idBandejaAnuncios:j_id88:10943:j_id89">
+                  <table class="stable" width="98%">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <script type="text/javascript">
+                       //<![CDATA[
+ {
+	var selector = ".odd .stable";
+	try {
+		selector = eval(".odd .stable");
+	} catch (e) {}
+	jQuery(selector).addClass('row_par');
+}
+//]]>
+                      </script>
+                     </td>
+                    </tr>
+                    <tr>
+                     <td>
+                      <script type="text/javascript">
+                       //<![CDATA[
+ {
+	var selector = ".even .stable";
+	try {
+		selector = eval(".even .stable");
+	} catch (e) {}
+	jQuery(selector).addClass('row_impar');
+}
+//]]>
+                      </script>
+                     </td>
+                    </tr>
+                    <tr>
+                     <td>
+                      <table width="100%">
+                       <tbody>
+                        <tr>
+                         <td class="width95">
+                          <table width="100%">
+                           <tbody>
+                            <tr>
+                             <td class="width15">
+                              <table>
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <a class="accesoTitulo" href="#" id="idBandejaAnuncios:j_id88:10943:j_id96" onclick="return _JSFFormSubmit('idBandejaAnuncios:j_id88:10943:j_id96','idBandejaAnuncios',null,{'idBandejaAnuncios:j_idcl':'idBandejaAnuncios:j_id88:10943:j_id96'} )" style="text-decoration:underline;font-weight:bold;">
+                                   N.º 2025/00165
+                                  </a>
+                                 </td>
+                                </tr>
+                               </tbody>
+                              </table>
+                             </td>
+                             <td class="width80">
+                              <table>
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <b>
+                                   <a href="#" id="idBandejaAnuncios:j_id88:10943:j_id100" onclick="return _JSFFormSubmit('idBandejaAnuncios:j_id88:10943:j_id100','idBandejaAnuncios',null,{'idBandejaAnuncios:j_idcl':'idBandejaAnuncios:j_id88:10943:j_id100'} )" style="text-decoration:underline;text-transform:uppercase;font-weight:bold;">
+                                    Convocatoria concurso de acceso a plazas de Cuerpos Docentes. Varias Áreas
+                                   </a>
+                                  </b>
+                                  <i>
+                                   <label style="font-style:italic">
+                                    Publicado el
+                                   </label>
+                                   <span style="font-style:italic">
+                                    10/02/2025
+                                   </span>
+                                  </i>
+                                 </td>
+                                </tr>
+                               </tbody>
+                              </table>
+                             </td>
+                            </tr>
+                            <tr>
+                             <td class="width15">
+                              <img alt="" class="rich-spacer" height="5" id="idBandejaAnuncios:j_id88:10943:j_id105" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="100%"/>
+                             </td>
+                             <td class="width80">
+                              <table>
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <label>
+                                   Anuncio por el que se le da publicidad a la Resolución de 3 de febrero de 2025, de la Universidad de Córdoba (BOE núm. 35, de 10 de febrero), por la que se convoca concurso de acceso a plazas de Cuerpos Docentes Universitarios. Código plaza: F250201-PI, Área de Conocimiento Filología Inglesa; Código plaza F250202-PI, Área de Conocimiento Fisiología; Código plaza F250203-PI, Área de Conocimiento Ingeniería Agroforestal; y Código plaza F250204-PI, Área de Conocimiento Literatura Española.
+                                  </label>
+                                 </td>
+                                </tr>
+                               </tbody>
+                              </table>
+                             </td>
+                            </tr>
+                           </tbody>
+                          </table>
+                         </td>
+                         <td class="width5">
+                          <table width="100%">
+                           <tbody>
+                            <tr>
+                             <td>
+                              <table style="float:right;" width="100%">
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <table class="alignCenter">
+                                   <tbody>
+                                    <tr>
+                                     <td>
+                                      <a href="#" id="idBandejaAnuncios:j_id88:10943:j_id111" onclick="return _JSFFormSubmit('idBandejaAnuncios:j_id88:10943:j_id111','idBandejaAnuncios',null,{'idBandejaAnuncios:j_idcl':'idBandejaAnuncios:j_id88:10943:j_id111'} )" title="Descargar Documentos Publicados">
+                                       <img alt="" class="rich-spacer icono32 descargarPubliBandeja alignTextBottom" height="32" id="idBandejaAnuncios:j_id88:10943:j_id112" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="32"/>
+                                      </a>
+                                     </td>
+                                    </tr>
+                                    <tr>
+                                     <td>
+                                      <label class="textoIcono32">
+                                       Descargar Documento
+                                      </label>
+                                     </td>
+                                    </tr>
+                                   </tbody>
+                                  </table>
+                                 </td>
+                                 <td>
+                                  <table class="alignCenter">
+                                   <tbody>
+                                    <tr>
+                                     <td>
+                                      <a href="#" id="idBandejaAnuncios:j_id88:10943:j_id115" name="idBandejaAnuncios:j_id88:10943:j_id115" onclick="A4J.AJAX.Submit('idBandejaAnuncios',event,{'similarityGroupingId':'idBandejaAnuncios:j_id88:10943:j_id115','parameters':{'idBandejaAnuncios:j_id88:10943:j_id115':'idBandejaAnuncios:j_id88:10943:j_id115'} } );return false;" title="Consultar Anuncio">
+                                       <img alt="" class="rich-spacer icono32 detallesBandeja alignTextBottom" height="32" id="idBandejaAnuncios:j_id88:10943:j_id116" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="32"/>
+                                      </a>
+                                     </td>
+                                    </tr>
+                                    <tr>
+                                     <td>
+                                      <label class="textoIcono32">
+                                       Detalle Anuncio
+                                      </label>
+                                     </td>
+                                    </tr>
+                                   </tbody>
+                                  </table>
+                                 </td>
+                                </tr>
+                               </tbody>
+                              </table>
+                             </td>
+                            </tr>
+                           </tbody>
+                          </table>
+                         </td>
+                        </tr>
+                       </tbody>
+                      </table>
+                     </td>
+                    </tr>
+                   </tbody>
+                  </table>
+                 </td>
+                </tr>
+                <tr class="rich-table-row odd">
+                 <td class="rich-table-cell center" id="idBandejaAnuncios:j_id88:10942:j_id89">
+                  <table class="stable" width="98%">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <script type="text/javascript">
+                       //<![CDATA[
+ {
+	var selector = ".odd .stable";
+	try {
+		selector = eval(".odd .stable");
+	} catch (e) {}
+	jQuery(selector).addClass('row_par');
+}
+//]]>
+                      </script>
+                     </td>
+                    </tr>
+                    <tr>
+                     <td>
+                      <script type="text/javascript">
+                       //<![CDATA[
+ {
+	var selector = ".even .stable";
+	try {
+		selector = eval(".even .stable");
+	} catch (e) {}
+	jQuery(selector).addClass('row_impar');
+}
+//]]>
+                      </script>
+                     </td>
+                    </tr>
+                    <tr>
+                     <td>
+                      <table width="100%">
+                       <tbody>
+                        <tr>
+                         <td class="width95">
+                          <table width="100%">
+                           <tbody>
+                            <tr>
+                             <td class="width15">
+                              <table>
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <a class="accesoTitulo" href="#" id="idBandejaAnuncios:j_id88:10942:j_id96" onclick="return _JSFFormSubmit('idBandejaAnuncios:j_id88:10942:j_id96','idBandejaAnuncios',null,{'idBandejaAnuncios:j_idcl':'idBandejaAnuncios:j_id88:10942:j_id96'} )" style="text-decoration:underline;font-weight:bold;">
+                                   N.º 2025/00164
+                                  </a>
+                                 </td>
+                                </tr>
+                               </tbody>
+                              </table>
+                             </td>
+                             <td class="width80">
+                              <table>
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <b>
+                                   <a href="#" id="idBandejaAnuncios:j_id88:10942:j_id100" onclick="return _JSFFormSubmit('idBandejaAnuncios:j_id88:10942:j_id100','idBandejaAnuncios',null,{'idBandejaAnuncios:j_idcl':'idBandejaAnuncios:j_id88:10942:j_id100'} )" style="text-decoration:underline;text-transform:uppercase;font-weight:bold;">
+                                    Convocatoria 2024 de la Modalidad 4 del Plan Propio de Investigación Internacional de la Universidad de Córdoba. Declaración desierta
+                                   </a>
+                                  </b>
+                                  <i>
+                                   <label style="font-style:italic">
+                                    Publicado el
+                                   </label>
+                                   <span style="font-style:italic">
+                                    10/02/2025
+                                   </span>
+                                  </i>
+                                 </td>
+                                </tr>
+                               </tbody>
+                              </table>
+                             </td>
+                            </tr>
+                            <tr>
+                             <td class="width15">
+                              <img alt="" class="rich-spacer" height="5" id="idBandejaAnuncios:j_id88:10942:j_id105" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="100%"/>
+                             </td>
+                             <td class="width80">
+                              <table>
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <label>
+                                   Resolución de la Vicerrectora de Política Científica, de 7 de febrero de 2025, por la que se declara desierta la Convocatoria para 2024 de la Modalidad 4 del Plan Propio de Investigación Internacional: Estancias breves en Grupos de investigación de reconocido prestigio para fomentar el liderazgo de los investigadores de la Universidad de Córdoba en proyectos europeos.
+                                  </label>
+                                 </td>
+                                </tr>
+                               </tbody>
+                              </table>
+                             </td>
+                            </tr>
+                           </tbody>
+                          </table>
+                         </td>
+                         <td class="width5">
+                          <table width="100%">
+                           <tbody>
+                            <tr>
+                             <td>
+                              <table style="float:right;" width="100%">
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <table class="alignCenter">
+                                   <tbody>
+                                    <tr>
+                                     <td>
+                                      <a href="#" id="idBandejaAnuncios:j_id88:10942:j_id111" onclick="return _JSFFormSubmit('idBandejaAnuncios:j_id88:10942:j_id111','idBandejaAnuncios',null,{'idBandejaAnuncios:j_idcl':'idBandejaAnuncios:j_id88:10942:j_id111'} )" title="Descargar Documentos Publicados">
+                                       <img alt="" class="rich-spacer icono32 descargarPubliBandeja alignTextBottom" height="32" id="idBandejaAnuncios:j_id88:10942:j_id112" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="32"/>
+                                      </a>
+                                     </td>
+                                    </tr>
+                                    <tr>
+                                     <td>
+                                      <label class="textoIcono32">
+                                       Descargar Documento
+                                      </label>
+                                     </td>
+                                    </tr>
+                                   </tbody>
+                                  </table>
+                                 </td>
+                                 <td>
+                                  <table class="alignCenter">
+                                   <tbody>
+                                    <tr>
+                                     <td>
+                                      <a href="#" id="idBandejaAnuncios:j_id88:10942:j_id115" name="idBandejaAnuncios:j_id88:10942:j_id115" onclick="A4J.AJAX.Submit('idBandejaAnuncios',event,{'similarityGroupingId':'idBandejaAnuncios:j_id88:10942:j_id115','parameters':{'idBandejaAnuncios:j_id88:10942:j_id115':'idBandejaAnuncios:j_id88:10942:j_id115'} } );return false;" title="Consultar Anuncio">
+                                       <img alt="" class="rich-spacer icono32 detallesBandeja alignTextBottom" height="32" id="idBandejaAnuncios:j_id88:10942:j_id116" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="32"/>
+                                      </a>
+                                     </td>
+                                    </tr>
+                                    <tr>
+                                     <td>
+                                      <label class="textoIcono32">
+                                       Detalle Anuncio
+                                      </label>
+                                     </td>
+                                    </tr>
+                                   </tbody>
+                                  </table>
+                                 </td>
+                                </tr>
+                               </tbody>
+                              </table>
+                             </td>
+                            </tr>
+                           </tbody>
+                          </table>
+                         </td>
+                        </tr>
+                       </tbody>
+                      </table>
+                     </td>
+                    </tr>
+                   </tbody>
+                  </table>
+                 </td>
+                </tr>
+               </tbody>
+              </table>
+             </div>
+             <input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden" value="j_id1"/>
+            </form>
+            <span id="includes">
+             <div id="editarAnuncioModal" style="display: none;">
+              <input autocomplete="off" id="editarAnuncioModalOpenedState" name="editarAnuncioModalOpenedState" type="hidden"/>
+              <div class="rich-modalpanel" id="editarAnuncioModalContainer" style="position: absolute; display: none; z-index: 100; background-color: inherit;">
+               <div class="rich-mpnl-mask-div-opaque rich-mpnl-mask-div" id="editarAnuncioModalDiv" style="z-index: -1;">
+                <button class="rich-mpnl-button" id="editarAnuncioModalFirstHref">
+                </button>
+               </div>
+               <div class="rich-mpnl-panel">
+                <div class="rich-mp-container" id="editarAnuncioModalCDiv" style="position: absolute; left: 0px; top: 0px; z-index: 9;">
+                 <div class="rich-mpnl-shadow" id="editarAnuncioModalShadowDiv">
+                 </div>
+                 <div class="rich-mpnl-content" id="editarAnuncioModalContentDiv">
+                  <table border="0" cellpadding="0" cellspacing="0" class="rich-mp-content-table" id="editarAnuncioModalContentTable" style="width: 1000px;height: 1px;">
+                   <tr style="height: 1%;">
+                    <td class="rich-mpnl-header-cell">
+                     <div class="rich-mpnl-text rich-mpnl-header" id="editarAnuncioModalHeader" style="white-space: nowrap;">
+                      CONSULTAR ANUNCIO
+                     </div>
+                    </td>
+                   </tr>
+                   <tr style="height: 99%">
+                    <td class="rich-mpnl-body" valign="top">
+                     <script type="text/javascript">
+                      var clipboard = new Clipboard('.btn');
+
+			function copiar() {
+				showPortapapeles({duration:0.0});
+				hidePortapapeles({duration:1.0, delay:5.0});
+				return false;
+			}
+                     </script>
+                     <form action="/bouco/bandejaAnuncios.htm" enctype="application/x-www-form-urlencoded" id="editarAnuncioForm" method="post" name="editarAnuncioForm">
+                      <input name="editarAnuncioForm" type="hidden" value="editarAnuncioForm"/>
+                      <script type="text/javascript">
+                       Richfaces.effect.create({'name':'hidePortapapeles','attachObj':'divPortapapeles','params':{},'type':'Fade','attachId':'divPortapapeles'} )
+                      </script>
+                      <script type="text/javascript">
+                       Richfaces.effect.create({'name':'showPortapapeles','attachObj':'divPortapapeles','params':{},'type':'Appear','attachId':'divPortapapeles'} )
+                      </script>
+                      <div id="divCopyUrl">
+                       <label class="accesoTitulo left">
+                        DATOS ANUNCIO
+                       </label>
+                       <label class="labelPortapapeles">
+                        Copiar Enlace
+                       </label>
+                       <div class="btn linkPortapapeles" data-clipboard-text="" onclick="copiar();">
+                        <img src="/bouco/temas/iconos/16x16/clipboard_sign16.png"/>
+                       </div>
+                      </div>
+                      <div id="divPortapapeles" style="display: none;">
+                       Copie el siguiente enlace:
+                      </div>
+                      <div class="rich-panel accesoSeparador noPadding noBorder noBackground" id="editarAnuncioForm:j_id127">
+                       <div class="rich-panel-body noPadding" id="editarAnuncioForm:j_id127_body">
+                       </div>
+                      </div>
+                      <div class="rich-panel noPadding noBorder noBackground" id="editarAnuncioForm:j_id128">
+                       <div class="rich-panel-body" id="editarAnuncioForm:j_id128_body">
+                        <table width="100%">
+                         <tbody>
+                          <tr>
+                           <td class="width85">
+                            <table class="align_top" width="100%">
+                             <tbody>
+                              <tr>
+                               <td>
+                                <table>
+                                 <tbody>
+                                  <tr>
+                                   <td>
+                                    <label class="labelTablon">
+                                     Número de Anuncio
+                                    </label>
+                                   </td>
+                                   <td>
+                                   </td>
+                                  </tr>
+                                  <tr>
+                                   <td>
+                                    <label class="labelTablon">
+                                     Fecha de Creación
+                                    </label>
+                                   </td>
+                                   <td>
+                                   </td>
+                                  </tr>
+                                  <tr>
+                                   <td>
+                                    <label class="labelTablon">
+                                     Título de Anuncio
+                                    </label>
+                                   </td>
+                                   <td>
+                                    <span class="campoTablon">
+                                    </span>
+                                   </td>
+                                  </tr>
+                                  <tr>
+                                   <td>
+                                    <label class="labelTablon">
+                                     Descripción
+                                    </label>
+                                   </td>
+                                   <td>
+                                    <span class="campoTablon campoTablonArea">
+                                    </span>
+                                   </td>
+                                  </tr>
+                                  <tr>
+                                   <td>
+                                    <label class="labelTablon">
+                                     Expediente Relacionado
+                                    </label>
+                                   </td>
+                                   <td>
+                                    <span class="campoTablon">
+                                    </span>
+                                   </td>
+                                  </tr>
+                                  <tr>
+                                   <td>
+                                    <label class="labelTablon">
+                                     Tipo de Anuncio
+                                    </label>
+                                   </td>
+                                   <td>
+                                    <span class="campoTablon">
+                                    </span>
+                                   </td>
+                                  </tr>
+                                 </tbody>
+                                </table>
+                               </td>
+                              </tr>
+                             </tbody>
+                            </table>
+                           </td>
+                           <td class="width15 vAlignBottom">
+                            <table width="100%">
+                             <tbody>
+                              <tr>
+                               <td>
+                                <table style="float:right;text-align:right;">
+                                 <tbody>
+                                  <tr>
+                                   <td>
+                                    <a href="#" id="editarAnuncioForm:j_id190" onclick="return _JSFFormSubmit('editarAnuncioForm:j_id190','editarAnuncioForm','_blank',{'editarAnuncioForm:j_idcl':'editarAnuncioForm:j_id190'} )" title="Descargar Documento de Publicación Original">
+                                     <img alt="" class="rich-spacer icono descargarPubliOriginal2" height="16" id="editarAnuncioForm:j_id191" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="16"/>
+                                    </a>
+                                   </td>
+                                   <td>
+                                    <a href="#" id="editarAnuncioForm:j_id192" onclick="return _JSFFormSubmit('editarAnuncioForm:j_id192','editarAnuncioForm','_blank',{'editarAnuncioForm:j_idcl':'editarAnuncioForm:j_id192'} )" title="Descargar Informe de Firma">
+                                     <img alt="" class="rich-spacer icono informeFirmas2" height="16" id="editarAnuncioForm:j_id193" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="16"/>
+                                    </a>
+                                   </td>
+                                   <td>
+                                    <a href="#" id="editarAnuncioForm:j_id194" onclick="return _JSFFormSubmit('editarAnuncioForm:j_id194','editarAnuncioForm','_blank',{'editarAnuncioForm:j_idcl':'editarAnuncioForm:j_id194'} )" title="Descargar Fichero de Firma">
+                                     <img alt="" class="rich-spacer icono descargarFirma2" height="16" id="editarAnuncioForm:j_id195" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="16"/>
+                                    </a>
+                                   </td>
+                                   <td>
+                                    <a href="#" id="editarAnuncioForm:j_id196" onclick="return _JSFFormSubmit('editarAnuncioForm:j_id196','editarAnuncioForm','_blank',{'editarAnuncioForm:j_idcl':'editarAnuncioForm:j_id196'} )" title="Descargar todos los documentos">
+                                     <img alt="" class="rich-spacer icono descargarDocumentosZip" height="16" id="editarAnuncioForm:j_id197" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="16"/>
+                                    </a>
+                                   </td>
+                                  </tr>
+                                 </tbody>
+                                </table>
+                               </td>
+                              </tr>
+                             </tbody>
+                            </table>
+                           </td>
+                          </tr>
+                         </tbody>
+                        </table>
+                       </div>
+                      </div>
+                      <center>
+                       <table style="display:none;">
+                        <tbody>
+                         <tr>
+                          <td>
+                           <table class="alignCenter" width="110">
+                            <tbody>
+                             <tr>
+                              <td>
+                               <a class="icono informeFirma" href="#" id="editarAnuncioForm:j_id203" onclick="return _JSFFormSubmit('editarAnuncioForm:j_id203','editarAnuncioForm','_blank',{'editarAnuncioForm:j_idcl':'editarAnuncioForm:j_id203'} )" title="Descargar Informe de Firma">
+                                <img alt="" class="rich-spacer icono32 informeFirmas2" height="32" id="editarAnuncioForm:j_id204" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="32"/>
+                               </a>
+                              </td>
+                             </tr>
+                             <tr>
+                              <td>
+                               <label class="textoIcono32">
+                                Descargar Informe de Firma
+                               </label>
+                              </td>
+                             </tr>
+                            </tbody>
+                           </table>
+                          </td>
+                          <td>
+                           <table class="alignCenter" width="140">
+                            <tbody>
+                             <tr>
+                              <td>
+                               <a href="#" id="editarAnuncioForm:j_id207" onclick="return _JSFFormSubmit('editarAnuncioForm:j_id207','editarAnuncioForm','_blank',{'editarAnuncioForm:j_idcl':'editarAnuncioForm:j_id207'} )" title="Descargar Documento de Publicación Original">
+                                <img alt="" class="rich-spacer icono32 descargarPubliOriginal2" height="32" id="editarAnuncioForm:j_id208" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="32"/>
+                               </a>
+                              </td>
+                             </tr>
+                             <tr>
+                              <td>
+                               <label class="textoIcono32">
+                                Descargar Documento de Publicación Original
+                               </label>
+                              </td>
+                             </tr>
+                            </tbody>
+                           </table>
+                          </td>
+                          <td>
+                           <table class="alignCenter" width="110">
+                            <tbody>
+                             <tr>
+                              <td>
+                               <a class="icono32 selloTiempo" href="#" id="editarAnuncioForm:j_id211" onclick="return _JSFFormSubmit('editarAnuncioForm:j_id211','editarAnuncioForm','_blank',{'editarAnuncioForm:j_idcl':'editarAnuncioForm:j_id211'} )" title="Descargar Fichero de Firma">
+                                <img alt="" class="rich-spacer icono32 descargarFirma2" height="32" id="editarAnuncioForm:j_id212" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="32"/>
+                               </a>
+                              </td>
+                             </tr>
+                             <tr>
+                              <td>
+                               <label class="textoIcono32">
+                                Descargar Fichero de Firma
+                               </label>
+                              </td>
+                             </tr>
+                            </tbody>
+                           </table>
+                          </td>
+                         </tr>
+                        </tbody>
+                       </table>
+                      </center>
+                      <img alt="" class="rich-spacer" height="10" id="editarAnuncioForm:j_id215" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" style="display:none;" width="1"/>
+                      <div>
+                      </div>
+                      <img alt="" class="rich-spacer" height="10" id="editarAnuncioForm:j_id241" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="1"/>
+                      <div>
+                       <label class="accesoTitulo">
+                        DOCUMENTOS PUBLICADOS
+                       </label>
+                      </div>
+                      <div class="rich-panel accesoSeparador noPadding noBorder noBackground" id="editarAnuncioForm:j_id245">
+                       <div class="rich-panel-body noPadding" id="editarAnuncioForm:j_id245_body">
+                       </div>
+                      </div>
+                      <div class="rich-panel noPadding noBorder noBackground" id="editarAnuncioForm:panelDocumentosPublicados">
+                       <div class="rich-panel-body" id="editarAnuncioForm:panelDocumentosPublicados_body">
+                        <table border="0" cellpadding="0" cellspacing="0" class="rich-table" id="editarAnuncioForm:tablaDocumentosPublicados" width="100%">
+                         <colgroup span="3">
+                         </colgroup>
+                         <thead class="rich-table-thead">
+                          <tr class="rich-table-subheader">
+                           <th class="rich-table-subheadercell" id="editarAnuncioForm:tablaDocumentosPublicados:j_id246header" scope="col">
+                            <div id="editarAnuncioForm:tablaDocumentosPublicados:j_id246header:sortDiv">
+                             <span class="titulosTabla">
+                              TÍTULO DOCUMENTO
+                             </span>
+                            </div>
+                           </th>
+                           <th class="rich-table-subheadercell" id="editarAnuncioForm:tablaDocumentosPublicados:j_id249header" scope="col">
+                            <div id="editarAnuncioForm:tablaDocumentosPublicados:j_id249header:sortDiv">
+                             <span class="titulosTabla">
+                              NOMBRE DOCUMENTO
+                             </span>
+                            </div>
+                           </th>
+                           <th class="rich-table-subheadercell" id="editarAnuncioForm:tablaDocumentosPublicados:j_id252header" scope="col">
+                            <div id="editarAnuncioForm:tablaDocumentosPublicados:j_id252header:sortDiv">
+                             <span class="titulosTabla">
+                              ACCIONES
+                             </span>
+                            </div>
+                           </th>
+                          </tr>
+                         </thead>
+                         <tbody id="editarAnuncioForm:tablaDocumentosPublicados:tb">
+                         </tbody>
+                        </table>
+                        <div class="rich-panel" id="editarAnuncioForm:tablaDocumentosNoRowsPublicados">
+                         <div class="rich-panel-body panelNoRows" id="editarAnuncioForm:tablaDocumentosNoRowsPublicados_body">
+                          No hay ningún registro
+                         </div>
+                        </div>
+                        <img alt="" class="rich-spacer" height="5" id="editarAnuncioForm:j_id258" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="100%"/>
+                        <div align="center" class="rich-datascr" id="editarAnuncioForm:tablaDocumentosScrollerPublicados" style=" ">
+                         <table border="0" cellpadding="0" cellspacing="1" class="rich-dtascroller-table" id="editarAnuncioForm:tablaDocumentosScrollerPublicados_table" style="text-align:center">
+                          <tbody>
+                           <tr>
+                            <td class="rich-datascr-button-dsbld rich-datascr-button">
+                             ««
+                            </td>
+                            <td class="rich-datascr-button-dsbld rich-datascr-button">
+                             «
+                            </td>
+                            <td class="rich-datascr-button-dsbld rich-datascr-button">
+                            </td>
+                            <td class="rich-datascr-button-dsbld rich-datascr-button">
+                            </td>
+                            <td class="rich-datascr-button-dsbld rich-datascr-button">
+                             »
+                            </td>
+                            <td class="rich-datascr-button-dsbld rich-datascr-button">
+                             »»
+                            </td>
+                           </tr>
+                          </tbody>
+                         </table>
+                         <script type="text/javascript">
+                          new Richfaces.Datascroller('editarAnuncioForm:tablaDocumentosScrollerPublicados', function(event){A4J.AJAX.Submit('editarAnuncioForm',event,{'ignoreDupResponses':true,'implicitEventsQueue':'editarAnuncioForm:tablaDocumentosScrollerPublicados','similarityGroupingId':'editarAnuncioForm:tablaDocumentosScrollerPublicados','parameters':{'ajaxSingle':'editarAnuncioForm:tablaDocumentosScrollerPublicados','editarAnuncioForm:tablaDocumentosScrollerPublicados':event.memo.page} } ); return false;});
+                         </script>
+                        </div>
+                       </div>
+                      </div>
+                      <img alt="" class="rich-spacer" height="10" id="editarAnuncioForm:j_id259" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="1"/>
+                      <div>
+                      </div>
+                      <img alt="" class="rich-spacer" height="5" id="editarAnuncioForm:j_id275" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="100%"/>
+                      <div id="editarAnuncioForm:j_id276" style="font-size: 0px;">
+                       <div class="rich-separator separadorBtn" style="height: 1px; background-image: url(/bouco/a4j/g/3_3_3.Finalorg.richfaces.renderkit.html.images.SimpleSeparatorImage/DATB/eAFjYEx0UGUBAAKdAMw_); null;">
+                       </div>
+                      </div>
+                      <center>
+                       <table class="alignCenter">
+                        <tbody>
+                         <tr>
+                          <td>
+                           <input class="icono32 volver" id="editarAnuncioForm:j_id279" name="editarAnuncioForm:j_id279" onclick="A4J.AJAX.Submit('editarAnuncioForm',event,{'similarityGroupingId':'editarAnuncioForm:j_id279','parameters':{'editarAnuncioForm:j_id279':'editarAnuncioForm:j_id279'} } );return false;" title="Cerrar" type="button"/>
+                          </td>
+                         </tr>
+                         <tr>
+                          <td>
+                           <label class="textoIcono32">
+                            Cerrar
+                           </label>
+                          </td>
+                         </tr>
+                        </tbody>
+                       </table>
+                      </center>
+                      <input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden" value="j_id1"/>
+                     </form>
+                    </td>
+                   </tr>
+                  </table>
+                 </div>
+                </div>
+               </div>
+               <div class="rich-mpnl-mask-div rich-mpnl-mask-div-transparent" id="editarAnuncioModalCursorDiv" style="z-index: -200;">
+                <button class="rich-mpnl-button" id="editarAnuncioModalLastHref">
+                </button>
+               </div>
+               <script type="text/javascript">
+                new ModalPanel('editarAnuncioModal',
+				{
+					width: -1,
+					height: -1,
+
+					minWidth: 1000,
+					minHeight: -1,
+
+					resizeable: false,
+					moveable: false,
+
+					left: "auto",
+					top: "auto",
+
+					zindex: 100,onresize: '',onmove: '',onshow: function(event){setContent('editarAnuncioModal')},onhide: '',onbeforeshow: '',onbeforehide: '',
+					domElementAttachment: "",				
+					keepVisualState: false,
+					showWhenRendered: false,
+					selectBehavior: "disable",
+
+					autosized: true,
+					overlapEmbedObjects: false});
+               </script>
+              </div>
+              <script type="text/javascript">
+              </script>
+             </div>
+             <div id="verificarModal" style="display: none;">
+              <input autocomplete="off" id="verificarModalOpenedState" name="verificarModalOpenedState" type="hidden"/>
+              <div class="rich-modalpanel centrado" id="verificarModalContainer" style="position: absolute; display: none; z-index: 100; background-color: inherit;">
+               <div class="rich-mpnl-mask-div-opaque rich-mpnl-mask-div" id="verificarModalDiv" style="z-index: -1;">
+                <button class="rich-mpnl-button" id="verificarModalFirstHref">
+                </button>
+               </div>
+               <div class="rich-mpnl-panel">
+                <div class="rich-mp-container" id="verificarModalCDiv" style="position: absolute; left: 0px; top: 0px; z-index: 9;">
+                 <div class="rich-mpnl-shadow" id="verificarModalShadowDiv">
+                 </div>
+                 <div class="rich-mpnl-content" id="verificarModalContentDiv">
+                  <table border="0" cellpadding="0" cellspacing="0" class="rich-mp-content-table" id="verificarModalContentTable" style="width: 700px;height: 1px;">
+                   <tr style="height: 1%;">
+                    <td class="rich-mpnl-header-cell">
+                     <div class="rich-mpnl-text rich-mpnl-header" id="verificarModalHeader" style="white-space: nowrap;">
+                      VERIFICAR ARCHIVO DE FIRMA
+                     </div>
+                    </td>
+                   </tr>
+                   <tr style="height: 99%">
+                    <td class="rich-mpnl-body" valign="top">
+                     <form action="/bouco/bandejaAnuncios.htm" enctype="application/x-www-form-urlencoded" id="verificarForm" method="post" name="verificarForm">
+                      <input name="verificarForm" type="hidden" value="verificarForm"/>
+                      <label class="accesoTitulo">
+                       DATOS ANUNCIO
+                      </label>
+                      <div class="rich-panel accesoSeparador noPadding noBorder noBackground" id="verificarForm:j_id285">
+                       <div class="rich-panel-body noPadding" id="verificarForm:j_id285_body">
+                       </div>
+                      </div>
+                      <div class="rich-panel noPadding noBorder noBackground" id="verificarForm:j_id286">
+                       <div class="rich-panel-body" id="verificarForm:j_id286_body">
+                        <table width="100%">
+                         <tbody>
+                          <tr>
+                           <td class="width15">
+                            <label class="labelTablon">
+                             Resultado de la verificación
+                            </label>
+                           </td>
+                           <td class="width85">
+                            <label class="campoTablon">
+                            </label>
+                           </td>
+                          </tr>
+                         </tbody>
+                        </table>
+                       </div>
+                      </div>
+                      <table class="alignCenter">
+                       <tbody>
+                        <tr>
+                         <td>
+                          <input class="icono32 ok" id="verificarForm:j_id295" name="verificarForm:j_id295" onclick="A4J.AJAX.Submit('verificarForm',event,{'similarityGroupingId':'verificarForm:j_id295','parameters':{'verificarForm:j_id295':'verificarForm:j_id295'} } );return false;" title="Cerrar" type="button"/>
+                         </td>
+                        </tr>
+                        <tr>
+                         <td>
+                          <label class="textoIcono32">
+                           Cerrar
+                          </label>
+                         </td>
+                        </tr>
+                       </tbody>
+                      </table>
+                      <input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden" value="j_id1"/>
+                     </form>
+                    </td>
+                   </tr>
+                  </table>
+                 </div>
+                </div>
+               </div>
+               <div class="rich-mpnl-mask-div rich-mpnl-mask-div-transparent" id="verificarModalCursorDiv" style="z-index: -200;">
+                <button class="rich-mpnl-button" id="verificarModalLastHref">
+                </button>
+               </div>
+               <script type="text/javascript">
+                new ModalPanel('verificarModal',
+				{
+					width: 700,
+					height: -1,
+
+					minWidth: -1,
+					minHeight: -1,
+
+					resizeable: false,
+					moveable: true,
+
+					left: "auto",
+					top: "auto",
+
+					zindex: 100,onresize: '',onmove: '',onshow: '',onhide: '',onbeforeshow: '',onbeforehide: '',
+					domElementAttachment: "",				
+					keepVisualState: false,
+					showWhenRendered: false,
+					selectBehavior: "disable",
+
+					autosized: true,
+					overlapEmbedObjects: false});
+               </script>
+              </div>
+              <script type="text/javascript">
+              </script>
+             </div>
+            </span>
+           </div>
+          </body>
+         </div>
+        </div>
+       </td>
+       <td class="vAlignTop bannerCnt">
+        <div class="rich-panel bannerCnt noBorder noBackground noPadding" id="j_id298">
+         <div class="rich-panel-body noPadding" id="j_id298_body">
+          <!-- TEMAS DE LA PUBLICACION -->
+          <form action="/bouco/bandejaAnuncios.htm" enctype="application/x-www-form-urlencoded" id="j_id300" method="post" name="j_id300">
+           <input name="j_id300" type="hidden" value="j_id300"/>
+           <label class="accesoTitulo">
+            Temas de la publicación
+           </label>
+           <div class="rich-panel accesoSeparador noPadding noBorder noBackground" id="j_id300:j_id302">
+            <div class="rich-panel-body noPadding" id="j_id300:j_id302_body">
+            </div>
+           </div>
+           <table id="j_id300:capaCategorias">
+            <tbody>
+             <tr>
+              <td>
+               <select id="j_id300:idCatItem" name="j_id300:idCatItem" onchange="A4J.AJAX.Submit('j_id300',event,{'control':this,'similarityGroupingId':'j_id300:j_id305','parameters':{'ajaxSingle':'j_id300:idCatItem','j_id300:j_id305':'j_id300:j_id305'} } )" size="1" style="max-width:200px;">
+                <option value="">
+                 Seleccione
+                </option>
+                <option value="1">
+                 1. Acuerdos y Resoluciones de los Órganos de Gobierno
+                </option>
+                <option value="2">
+                 2. Autoridades y Personal
+                </option>
+                <option value="3">
+                 3. Otros
+                </option>
+               </select>
+               <script>
+                (function() {
+										  var selectName = "j_id300:idCatItem";
+										  var kids = document.getElementsByName(selectName)[0]
+										                     .getElementsByTagName("option");
+										  var contCatItem = 0;
+										  kids[contCatItem++].title = 'Seleccione';
+										}());
+               </script>
+              </td>
+             </tr>
+             <tr>
+              <td>
+               <span id="j_id300:subCatPanelBusq">
+               </span>
+              </td>
+             </tr>
+            </tbody>
+           </table>
+           <input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden" value="j_id1"/>
+          </form>
+          <!-- FIN TEMAS DE LA PUBLICACION -->
+          <!-- CALENDARIO DE PUBLICACION -->
+          <label class="accesoTitulo">
+           Calendario de Publicación
+          </label>
+          <div class="rich-panel accesoSeparador noPadding noBorder noBackground" id="j_id319">
+           <div class="rich-panel-body noPadding" id="j_id319_body">
+           </div>
+          </div>
+          <form action="/bouco/bandejaAnuncios.htm" enctype="application/x-www-form-urlencoded" id="idFormCalendario" method="post" name="idFormCalendario">
+           <input name="idFormCalendario" type="hidden" value="idFormCalendario"/>
+           <table id="idFormCalendario:capaCalendario">
+            <tbody>
+             <tr>
+              <td>
+               <span id="idFormCalendario:myCalendarPopup" style="display: none">
+                <input autocomplete="off" id="idFormCalendario:myCalendarInputDate" name="idFormCalendario:myCalendarInputDate" style="display:none" type="hidden"/>
+                <input autocomplete="off" id="idFormCalendario:myCalendarInputCurrentDate" name="idFormCalendario:myCalendarInputCurrentDate" style="display:none" type="hidden" value="02/2025"/>
+                <style type="text/css">
+                 .idFormCalendario_myCalendarDayCell{width:24px;height:22px;}
+                </style>
+               </span>
+               <div id="idFormCalendario:myCalendarIFrame" style="display: none;">
+               </div>
+               <div id="idFormCalendario:myCalendar" style="display: none;">
+               </div>
+               <div id="idFormCalendario:myCalendarScript" style="display: none;">
+                <script type="text/javascript">
+                 Richfaces.Calendar.addLocale('es', {'weekDayLabels':['domingo','lunes','martes','miércoles','jueves','viernes','sábado'] ,'weekDayLabelsShort':['dom','lun','mar','mié','jue','vie','sáb'] ,'monthLabels':['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'] ,'monthLabelsShort':['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'] ,'minDaysInFirstWeek':1,'firstWeekDay':1} );
+new Calendar('idFormCalendario:myCalendar', 
+			"es",{'showWeeksBar':false,'showFooter':false,'style':'z\x2Dindex: 3; width:200px','currentDate':new Date(2025,1,11),'datePattern':'dd/MM/yyyy','dayCellClass':'idFormCalendario_myCalendarDayCell','popup':false,'labels':{'apply':'Aplicar','clean':'Limpiar','today':'Hoy'} ,'enableManualInput':true,'onchanged':function(event){A4J.AJAX.Submit('idFormCalendario',event,{'similarityGroupingId':'idFormCalendario:j_id320','parameters':{'idFormCalendario:j_id320':'idFormCalendario:j_id320'} } )},'oncurrentdateselected':function(event){A4J.AJAX.Submit('idFormCalendario',event,{'similarityGroupingId':'idFormCalendario:j_id321','parameters':{'idFormCalendario:j_id321':'idFormCalendario:j_id321'} } )},'todayControlMode':'hidden'} ,{} ).load({'startDate':new Date(2025,1,1),'days':[{'data':null,'day':0,'enabled':false,'styleClass':null,'toolTip':null} ,{'data':null,'day':0,'enabled':true,'styleClass':'calendar_event','toolTip':null} ,{'data':null,'day':0,'enabled':true,'styleClass':'calendar_event','toolTip':null} ,{'data':null,'day':0,'enabled':true,'styleClass':'calendar_event','toolTip':null} ,{'data':null,'day':0,'enabled':true,'styleClass':'calendar_event','toolTip':null} ,{'data':null,'day':0,'enabled':true,'styleClass':'calendar_event','toolTip':null} ,{'data':null,'day':0,'enabled':true,'styleClass':'calendar_event','toolTip':null} ,{'data':null,'day':0,'enabled':false,'styleClass':null,'toolTip':null} ,{'data':null,'day':0,'enabled':false,'styleClass':null,'toolTip':null} ,{'data':null,'day':0,'enabled':true,'styleClass':'calendar_event','toolTip':null} ,{'data':null,'day':0,'enabled':false,'styleClass':null,'toolTip':null} ,{'data':null,'day':0,'enabled':false,'styleClass':null,'toolTip':null} ,{'data':null,'day':0,'enabled':false,'styleClass':null,'toolTip':null} ,{'data':null,'day':0,'enabled':false,'styleClass':null,'toolTip':null} ,{'data':null,'day':0,'enabled':false,'styleClass':null,'toolTip':null} ,{'data':null,'day':0,'enabled':false,'styleClass':null,'toolTip':null} ,{'data':null,'day':0,'enabled':false,'styleClass':null,'toolTip':null} ,{'data':null,'day':0,'enabled':false,'styleClass':null,'toolTip':null} ,{'data':null,'day':0,'enabled':false,'styleClass':null,'toolTip':null} ,{'data':null,'day':0,'enabled':false,'styleClass':null,'toolTip':null} ,{'data':null,'day':0,'enabled':false,'styleClass':null,'toolTip':null} ,{'data':null,'day':0,'enabled':false,'styleClass':null,'toolTip':null} ,{'data':null,'day':0,'enabled':false,'styleClass':null,'toolTip':null} ,{'data':null,'day':0,'enabled':false,'styleClass':null,'toolTip':null} ,{'data':null,'day':0,'enabled':false,'styleClass':null,'toolTip':null} ,{'data':null,'day':0,'enabled':false,'styleClass':null,'toolTip':null} ,{'data':null,'day':0,'enabled':false,'styleClass':null,'toolTip':null} ,{'data':null,'day':0,'enabled':false,'styleClass':null,'toolTip':null} ] } );
+                </script>
+               </div>
+              </td>
+             </tr>
+            </tbody>
+           </table>
+           <input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden" value="j_id1"/>
+          </form>
+          <!-- FIN CALENDARIO DE PUBLICACION -->
+          <!-- LINKS RELACIONES -->
+          <label class="accesoTitulo">
+           Links relacionados
+          </label>
+          <div class="rich-panel accesoSeparador noPadding noBorder noBackground" id="j_id324">
+           <div class="rich-panel-body noPadding" id="j_id324_body">
+           </div>
+          </div>
+          <div class="rich-panel bannerCnt noBorder noBackground noPadding" id="j_id325">
+           <div class="rich-panel-body noPadding" id="j_id325_body">
+            <table class="vAlignTop" width="100%">
+             <tbody>
+              <tr>
+               <td>
+                <table border="0" cellpadding="0" cellspacing="0" class="rich-table" id="tablaEnlacesInteres" width="100%">
+                 <colgroup span="1">
+                 </colgroup>
+                 <tbody id="tablaEnlacesInteres:tb">
+                  <tr class="rich-table-row rich-table-firstrow">
+                   <td class="rich-table-cell" id="tablaEnlacesInteres:0:j_id327">
+                    <div class="rich-panel" id="tablaEnlacesInteres:0:j_id328">
+                     <div class="rich-panel-body" id="tablaEnlacesInteres:0:j_id328_body">
+                      <a href="http://www.uco.es/organizacion/secretariageneral/images/doc/impresos/NormasPublicacionBOUCO_2021.pdf">
+                       Normas de publicación
+                      </a>
+                     </div>
+                    </div>
+                   </td>
+                  </tr>
+                  <tr class="rich-table-row">
+                   <td class="rich-table-cell" id="tablaEnlacesInteres:1:j_id327">
+                    <div class="rich-panel" id="tablaEnlacesInteres:1:j_id328">
+                     <div class="rich-panel-body" id="tablaEnlacesInteres:1:j_id328_body">
+                      <a href="http://www.juntadeandalucia.es/eboja">
+                       BOJA
+                      </a>
+                     </div>
+                    </div>
+                   </td>
+                  </tr>
+                  <tr class="rich-table-row">
+                   <td class="rich-table-cell" id="tablaEnlacesInteres:2:j_id327">
+                    <div class="rich-panel" id="tablaEnlacesInteres:2:j_id328">
+                     <div class="rich-panel-body" id="tablaEnlacesInteres:2:j_id328_body">
+                      <a href="http://www.boe.es/">
+                       BOE
+                      </a>
+                     </div>
+                    </div>
+                   </td>
+                  </tr>
+                  <tr class="rich-table-row">
+                   <td class="rich-table-cell" id="tablaEnlacesInteres:3:j_id327">
+                    <div class="rich-panel" id="tablaEnlacesInteres:3:j_id328">
+                     <div class="rich-panel-body" id="tablaEnlacesInteres:3:j_id328_body">
+                      <a href="mailto:bouco@uco.es">
+                       Contacte
+                      </a>
+                     </div>
+                    </div>
+                   </td>
+                  </tr>
+                 </tbody>
+                </table>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </div>
+          </div>
+          <!-- FIN LINKS RELACIONES -->
+         </div>
+        </div>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </center>
+   <div class="fila_fin_contenido">
+   </div>
+  </div>
+  <!-- Panel de idiomas -->
+  <div>
+  </div>
+  <!--Pie de pantalla-->
+  <div class="clearIt">
+  </div>
+  <div id="pie">
+   <p id="copyright">
+    Universidad de Córdoba
+   </p>
+   <p id="notas">
+    <a href="https://sede.uco.es/notas/avisos-legales.html">
+     Avisos legales
+    </a>
+    -
+    <a href="https://sede.uco.es/notas/accesibilidad.html">
+     Accesibilidad
+    </a>
+   </p>
+  </div>
+  <div id="pie2">
+   <form action="/bouco/bandejaAnuncios.htm" enctype="application/x-www-form-urlencoded" id="j_id346" method="post" name="j_id346" style="display:inline">
+    <input name="j_id346" type="hidden" value="j_id346"/>
+    <label class="enlace-pie">
+     Boletín Oficial de la Universidad de Córdoba
+    </label>
+    <label class="enlace-pie">
+     - Versión: 1.3.2f
+    </label>
+    <input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden" value="j_id1"/>
+   </form>
+  </div>
+  <!-- Panel de mensajes generales -->
+  <div class="clearIt">
+  </div>
+  <span id="panelStatus">
+   <div id="mensajes_mp" style="display: none;">
+    <input autocomplete="off" id="mensajes_mpOpenedState" name="mensajes_mpOpenedState" type="hidden"/>
+    <div class="rich-modalpanel" id="mensajes_mpContainer" style="position: absolute; display: none; z-index: 2900; background-color: inherit;">
+     <div class="rich-mpnl-mask-div-opaque rich-mpnl-mask-div" id="mensajes_mpDiv" style="z-index: -1;">
+      <button class="rich-mpnl-button" id="mensajes_mpFirstHref">
+      </button>
+     </div>
+     <div class="rich-mpnl-panel">
+      <div class="rich-mp-container" id="mensajes_mpCDiv" style="position: absolute; left: 0px; top: 0px; z-index: 9;">
+       <div class="rich-mpnl-shadow" id="mensajes_mpShadowDiv">
+       </div>
+       <div class="rich-mpnl-content" id="mensajes_mpContentDiv">
+        <table border="0" cellpadding="0" cellspacing="0" class="rich-mp-content-table" id="mensajes_mpContentTable" style="width: 400px;height: 100px;">
+         <tr style="height: 1%;">
+          <td class="rich-mpnl-header-cell">
+           <div class="rich-mpnl-text rich-mpnl-header" id="mensajes_mpHeader" style="white-space: nowrap;">
+           </div>
+          </td>
+         </tr>
+         <tr style="height: 99%">
+          <td class="rich-mpnl-body" valign="top">
+           <table class="width100 centrado">
+            <tbody>
+             <tr>
+              <td class="center">
+              </td>
+             </tr>
+             <tr>
+              <td class="center">
+               <ul class="rich-datalist noPadding" id="j_id355">
+               </ul>
+              </td>
+             </tr>
+             <tr>
+              <td class="center">
+               <img alt="" class="rich-spacer index-space1" height="1" id="j_id357" src="/bouco/a4j/g/3_3_3.Finalimages/spacer.gif" width="1"/>
+              </td>
+             </tr>
+             <tr>
+              <td class="center">
+               <form action="/bouco/bandejaAnuncios.htm" id="mensajesForm" method="post" name="mensajesForm">
+                <input alt="Cerrar" class="icono32 ok centrado" id="mensajesForm:errorAcceptButton" name="mensajesForm:errorAcceptButton" onclick="A4J.AJAX.Submit('mensajesForm',event,{'similarityGroupingId':'mensajesForm:errorAcceptButton','parameters':{'mensajesForm:errorAcceptButton':'mensajesForm:errorAcceptButton'} } );return false;" title="Cerrar" type="button"/>
+                <script id="mensajesForm:j_id359" type="text/javascript">
+                 //<![CDATA[
+		cerrarErrores=function(){A4J.AJAX.Submit('mensajesForm',null,{'similarityGroupingId':'mensajesForm:j_id359','parameters':{'mensajesForm:j_id359':'mensajesForm:j_id359'} } )};
+		//]]>
+                </script>
+                <input autocomplete="off" name="mensajesForm" type="hidden" value="mensajesForm"/>
+                <input autocomplete="off" name="autoScroll" type="hidden" value=""/>
+                <input autocomplete="off" name="mensajesForm:_link_hidden_" type="hidden" value=""/>
+                <input autocomplete="off" name="mensajesForm:j_idcl" type="hidden" value=""/>
+                <script type="text/javascript">
+                 function clear_mensajesForm() {
+_clearJSFFormParameters('mensajesForm','',['mensajesForm:_link_hidden_','mensajesForm:j_idcl']);
+}
+function clearFormHiddenParams_mensajesForm(){clear_mensajesForm();}
+function clearFormHiddenParams_mensajesForm(){clear_mensajesForm();}
+clear_mensajesForm();
+                </script>
+                <input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden" value="j_id1"/>
+               </form>
+              </td>
+             </tr>
+            </tbody>
+           </table>
+          </td>
+         </tr>
+        </table>
+       </div>
+      </div>
+     </div>
+     <div class="rich-mpnl-mask-div rich-mpnl-mask-div-transparent" id="mensajes_mpCursorDiv" style="z-index: -200;">
+      <button class="rich-mpnl-button" id="mensajes_mpLastHref">
+      </button>
+     </div>
+     <script type="text/javascript">
+      new ModalPanel('mensajes_mp',
+				{
+					width: -1,
+					height: 100,
+
+					minWidth: 400,
+					minHeight: -1,
+
+					resizeable: false,
+					moveable: true,
+
+					left: "auto",
+					top: "auto",
+
+					zindex: 2900,onresize: '',onmove: '',onshow: '',onhide: '',onbeforeshow: '',onbeforehide: '',
+					domElementAttachment: "",				
+					keepVisualState: false,
+					showWhenRendered: false,
+					selectBehavior: "disable",
+
+					autosized: true,
+					overlapEmbedObjects: false});
+     </script>
+    </div>
+    <script type="text/javascript">
+    </script>
+   </div>
+  </span>
+ </body>
+</html>
