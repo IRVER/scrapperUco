@@ -19,10 +19,11 @@ jobs:
           python-version: "3.9"
 
       - name: Descargar archivo de IDs procesados (si existe)
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: processed-ids
           path: results/
+        continue-on-error: true
 
       - name: Instalar dependencias
         run: pip install -r requirements.txt
@@ -34,7 +35,7 @@ jobs:
         run: python scrapper.py
 
       - name: Guardar archivo de IDs procesados
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: processed-ids
           path: results/processed_ids.json
