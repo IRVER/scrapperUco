@@ -15,6 +15,7 @@ PROCESSED_IDS_FILE = os.path.join(RESULTS_DIR, "processed_ids.json")
 # Configuración del bot de Telegram
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")  # Toma el token desde la variable de entorno
 TELEGRAM_CHANNEL_ID = os.getenv("TELEGRAM_CHANNEL_ID")  # Toma el canal desde la variable de entorno
+GH_PAT = os.getenv("GH_PAT")
 
 if not TELEGRAM_TOKEN or not TELEGRAM_CHANNEL_ID:
     raise ValueError("Faltan las variables de entorno TELEGRAM_TOKEN o TELEGRAM_CHANNEL_ID")
@@ -109,16 +110,28 @@ async def scrape():
     guardar_ids_procesados(ids_procesados)
 
 def guardar_cambios_git():
-    """Guarda processed_ids.json en el repositorio con un commit automático."""
+    """Guarda processed_ids.json en el repositorio con un commit automático usando GH_PAT."""
     try:
+        # Configurar usuario para commits
         subprocess.run(["git", "config", "--global", "user.email", "github-actions@github.com"], check=True)
         subprocess.run(["git", "config", "--global", "user.name", "GitHub Actions"], check=True)
-        subprocess.run(["git", "add", PROCESSED_IDS_FILE], check=True)
+
+        # Configurar la URL remota con el token GH_PAT
+        repo_url = f"https://x-access-token:{GH_PAT}@github.com/IRVER/scrapperUco.git"
+        subprocess.run(["git", "remote", "set-url", "origin", repo_url], check=True)
+
+        # Añadir y hacer commit de los archivos modificados
+        subprocess.run(["git", "add", PROCESSED_IDS_FILE, "results/publicaciones.json"], check=True)
         subprocess.run(["git", "commit", "-m", "Actualizar processed_ids.json con nuevas publicaciones"], check=True)
-        subprocess.run(["git", "push"], check=True)
+
+        # Hacer push al repositorio
+        subprocess.run(["git", "push", "origin", "main"], check=True)
+
         print("Archivo processed_ids.json actualizado y subido al repositorio.")
+
     except subprocess.CalledProcessError:
         print("No hay cambios nuevos en processed_ids.json. No se hizo commit.")
+
 
 if __name__ == "__main__":
     asyncio.run(scrape()) 
