@@ -6,6 +6,7 @@ from telegram import Bot
 from telegram.constants import ParseMode
 import asyncio
 import time
+import subprocess
 
 BASE_URL = "https://sede.uco.es/bouco/"
 RESULTS_DIR = "results"
@@ -107,5 +108,18 @@ async def scrape():
     ids_procesados.update(nuevos_ids)
     guardar_ids_procesados(ids_procesados)
 
+def guardar_cambios_git():
+    """Guarda processed_ids.json en el repositorio con un commit automático."""
+    try:
+        subprocess.run(["git", "config", "--global", "user.email", "github-actions@github.com"], check=True)
+        subprocess.run(["git", "config", "--global", "user.name", "GitHub Actions"], check=True)
+        subprocess.run(["git", "add", PROCESSED_IDS_FILE], check=True)
+        subprocess.run(["git", "commit", "-m", "Actualizar processed_ids.json con nuevas publicaciones"], check=True)
+        subprocess.run(["git", "push"], check=True)
+        print("Archivo processed_ids.json actualizado y subido al repositorio.")
+    except subprocess.CalledProcessError:
+        print("No hay cambios nuevos en processed_ids.json. No se hizo commit.")
+
 if __name__ == "__main__":
-    asyncio.run(scrape())  # Corrección aquí
+    asyncio.run(scrape()) 
+    guardar_cambios_git()
