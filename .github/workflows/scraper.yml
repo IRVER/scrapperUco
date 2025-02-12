@@ -23,6 +23,7 @@ jobs:
 
       - name: Guardar credenciales en un archivo temporal
         run: echo "${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}" > credentials.json
+        cat credentials.json  # Verificar el contenido en los logs
 
       - name: Ejecutar el scraper
         env:

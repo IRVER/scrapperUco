@@ -28,6 +28,17 @@ os.makedirs(RESULTS_DIR, exist_ok=True)
 def autenticar_google_drive():
     """Autenticación automática con cuenta de servicio."""
     scope = ["https://www.googleapis.com/auth/drive"]
+    
+    # Comprobar si el archivo `credentials.json` existe y se puede leer
+    if not os.path.exists("credentials.json"):
+        raise FileNotFoundError("❌ ERROR: El archivo credentials.json no existe.")
+
+    with open("credentials.json", "r", encoding="utf-8") as f:
+        try:
+            creds_data = json.load(f)  # Verifica si el JSON está bien formateado
+        except json.JSONDecodeError as e:
+            raise ValueError(f"❌ ERROR: credentials.json tiene un formato inválido: {e}")
+
     creds = ServiceAccountCredentials.from_json_keyfile_name("credentials.json", scope)
     gauth = GoogleAuth()
     gauth.credentials = creds
