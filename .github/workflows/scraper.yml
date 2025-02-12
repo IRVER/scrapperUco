@@ -2,7 +2,7 @@ name: Ejecutar Scraper UCO
 
 on:
   schedule:
-    - cron: "0 */2 * * *"  # Ejecutar todos los días a las 12:00 UTC (13:00 en España peninsular)
+    - cron: "0 */2 * * *"  # Ejecutar cada 2 horas
   workflow_dispatch:  # Permite ejecutarlo manualmente desde GitHub Actions
 
 jobs:
@@ -12,8 +12,6 @@ jobs:
     steps:
       - name: Checkout del repositorio
         uses: actions/checkout@v3
-        with:
-          persist-credentials: true  # Para poder hacer push al repo
 
       - name: Configurar Python
         uses: actions/setup-python@v4
@@ -23,20 +21,11 @@ jobs:
       - name: Instalar dependencias
         run: pip install -r requirements.txt
 
+      - name: Guardar credenciales en un archivo temporal
+        run: echo "${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}" > credentials.json
+
       - name: Ejecutar el scraper
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
         run: python scrapper.py
-
-      - name: Configurar credenciales de GitHub
-        run: |
-          git config --global user.email "github-actions@github.com"
-          git config --global user.name "GitHub Actions"
-          git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/IRVER/scrapperUco.git
-      
-      - name: Subir processed_ids.json al repositorio
-        run: |
-          git add results/processed_ids.json results/publicaciones.json
-          git commit -m "Actualizar archivos de publicaciones" || echo "No hay cambios para hacer commit"
-          git push origin main
