@@ -22,8 +22,9 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Guardar credenciales en un archivo temporal
-        run: echo "${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}" > credentials.json
-        cat credentials.json  # Verificar el contenido en los logs
+        run: |
+          echo '${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}' > credentials.json
+          cat credentials.json  # Verificar el contenido en los logs
 
       - name: Ejecutar el scraper
         env:
