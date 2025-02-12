@@ -12,18 +12,13 @@ jobs:
     steps:
       - name: Checkout del repositorio
         uses: actions/checkout@v3
+        with:
+          persist-credentials: true  # Para poder hacer push al repo
 
       - name: Configurar Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.9"
-
-      - name: Descargar archivo de IDs procesados (si existe)
-        uses: actions/download-artifact@v4
-        with:
-          name: processed-ids
-          path: results/
-        continue-on-error: true
 
       - name: Instalar dependencias
         run: pip install -r requirements.txt
@@ -34,8 +29,10 @@ jobs:
           TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
         run: python scrapper.py
 
-      - name: Guardar archivo de IDs procesados
-        uses: actions/upload-artifact@v4
-        with:
-          name: processed-ids
-          path: results/processed_ids.json
+      - name: Subir processed_ids.json al repositorio
+        run: |
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add results/processed_ids.json
+          git commit -m "Actualizar processed_ids.json con nuevas publicaciones" || echo "No hay cambios"
+          git push
