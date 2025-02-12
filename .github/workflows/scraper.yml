@@ -29,10 +29,14 @@ jobs:
           TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
         run: python scrapper.py
 
-      - name: Subir processed_ids.json al repositorio
+      - name: Configurar credenciales de GitHub
         run: |
           git config --global user.email "github-actions@github.com"
           git config --global user.name "GitHub Actions"
-          git add results/processed_ids.json
-          git commit -m "Actualizar processed_ids.json con nuevas publicaciones" || echo "No hay cambios"
-          git push
+          git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/IRVER/scrapperUco.git
+      
+      - name: Subir processed_ids.json al repositorio
+        run: |
+          git add results/processed_ids.json results/publicaciones.json
+          git commit -m "Actualizar archivos de publicaciones" || echo "No hay cambios para hacer commit"
+          git push origin main
